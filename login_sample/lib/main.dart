@@ -27,11 +27,10 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:Scaffold(
+      home: Scaffold(
         body: Column(
           children: [
             Container(
-
               padding: EdgeInsets.only(top: 70),
               child: Image.asset('assets/img1.jpg'),
             ),
@@ -39,22 +38,32 @@ class MyApp extends StatelessWidget {
               height: 150,
             ),
             Container(
+
               height: 150,
-            ),
+              padding: EdgeInsets.only(left: 30,right: 30),
+              child: TextFormField(
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                ),
+              ),
+              ),
+            
             Container(
-              child:
-              RaisedButton(
-                  onPressed: (){},
-                child: Text('login'),
+                child: SizedBox(
+              width: 200,
+              child: RaisedButton(
+                onPressed: () {},
+                child: Text(
+                  'Login',
+                  style: TextStyle(fontSize: 22, color: Colors.white),
+                ),
                 color: Colors.green,
               ),
-            )
-
-
+            ))
           ],
         ),
       ),
     );
   }
 }
-
