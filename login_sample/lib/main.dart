@@ -28,40 +28,68 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        body: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: 70),
-              child: Image.asset('assets/img1.jpg'),
-            ),
-            Container(
-              height: 150,
-            ),
-            Container(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 70,bottom: 50),
+                margin: EdgeInsets.only(left: 10,right: 10),
+                child: Image.asset('assets/img1.jpg'),
+              ),
+              Container(
+                height: 100,
+                padding: EdgeInsets.only(left: 30, right: 30),
+                margin: EdgeInsets.only(left: 10,right: 10),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.email),
+                      labelText: 'Email',
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                /*decoration: BoxDecoration(
+                    boxShadow:[
+                      BoxShadow(
+                          spreadRadius: 3,blurRadius: 5,color: Colors.black12)
+                      ],
+                borderRadius: BorderRadius.circular(30.0)),*/
 
-              height: 150,
-              padding: EdgeInsets.only(left: 30,right: 30),
-              child: TextFormField(
-                obscureText: true,
-                decoration: const InputDecoration(
-                  labelText: 'Password',
+
+                height: 100,
+                padding: EdgeInsets.only(left: 30, right: 30),
+                margin: EdgeInsets.only(left: 10,right: 10),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: TextFormField(
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      prefixIcon: Icon(Icons.lock),
+                      labelText: 'Password',
+                    ),
+                  ),
                 ),
               ),
-              ),
-            
-            Container(
+              Container(
+                padding: EdgeInsets.only(top: 50),
                 child: SizedBox(
-              width: 200,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Text(
-                  'Login',
-                  style: TextStyle(fontSize: 22, color: Colors.white),
+                  width: 200,
+                  child: RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Login',
+                      style: TextStyle(fontSize: 22, color: Colors.white),
+                    ),
+                    color: Colors.green,
+                  ),
                 ),
-                color: Colors.green,
-              ),
-            ))
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
