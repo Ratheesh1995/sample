@@ -32,9 +32,25 @@ class MyApp extends StatelessWidget {
           children: [
             Container(
 
-              padding: EdgeInsets.only(top: 50,left: 150),
-              child: Text('Login'),
+              padding: EdgeInsets.only(top: 70),
+              child: Image.asset('assets/img1.jpg'),
+            ),
+            Container(
+              height: 150,
+            ),
+            Container(
+              height: 150,
+            ),
+            Container(
+              child:
+              RaisedButton(
+                  onPressed: (){},
+                child: Text('login'),
+                color: Colors.green,
+              ),
             )
+
+
           ],
         ),
       ),
