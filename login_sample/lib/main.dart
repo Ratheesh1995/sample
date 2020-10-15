@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
+        //backgroundColor: Colors.grey,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -43,10 +44,11 @@ class MyApp extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: TextFormField(
-                    obscureText: true,
+                    obscureText: false,
                     decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.email),
                       labelText: 'Email',
+                      hintText: 'example@gmail.com',
                     ),
                   ),
                 ),
@@ -70,6 +72,7 @@ class MyApp extends StatelessWidget {
                     decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.lock),
                       labelText: 'Password',
+                      hintText: 'password',
                     ),
                   ),
                 ),
